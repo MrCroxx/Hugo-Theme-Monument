@@ -33,6 +33,14 @@
 
         {{ partial "post_meta.html" . }}
 
+        <hr>
+
+        <h2>Catalogue</h2>
+
+        {{ .TableOfContents }}
+
+        <hr>
+
         {{ .Content }}
     
         {{ partial "prev_next_post.html" . }}

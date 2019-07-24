@@ -57,7 +57,6 @@ The content `<div>` is where all your content goes.
     }
      .header h2 {
         font-weight: 300;
-        color: #FFF;
         padding: 0;
         margin-top: 0;
     }
@@ -123,10 +122,11 @@ appears on the left side of the page.
     /*
     This styles the selected menu item `<li>`.
     */
-    #menu .pure-menu-selected,
+    #menu .pure-menu-selected{
+        background: #F15340;
+    }
     #menu .pure-menu-heading {
-        background: #076570;
-        
+        background: #076570;        
     }
         /*
         This styles a link within a selected menu item `<li>`.
@@ -163,7 +163,7 @@ small screens.
     display: block; /* show this only on small screens */
     top: 0;
     left: 0; /* "#menu width" */
-    background: #F15340;
+    background: #076570;
     font-size: 10px; /* change this value to increase/decrease button size */
     z-index: 10;
     width: 2em;
@@ -171,9 +171,8 @@ small screens.
     padding: 2.1em 1.6em;
 }
 
-    .menu-link:hover,
-    .menu-link:focus {
-        background: #F15340;
+    .menu-link:hover{
+        background: #F79F66;
     }
 
     .menu-link span {

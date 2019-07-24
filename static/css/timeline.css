@@ -82,7 +82,7 @@
   .cd-timeline-content {
     position: relative;
     margin-left: 60px;
-    background: #ADE0E0;
+    background: #EDF9F9;
     border-radius: 0.25em;
     padding: 1em;
     box-shadow: 0 3px 0 #076570;
@@ -96,13 +96,12 @@
   .cd-timeline-content:hover{
     transform: translate(3%);
   }
-  .cd-timeline-content h2 {
-    color: #FFF;
+  .cd-timeline-content h2, .cd-timeline-content h3, .cd-timeline-content p {
+    color: #076570;
   }
   .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 13px;
     font-size: 0.8125rem;
-    color: #FFF;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     display: inline-block;
@@ -134,5 +133,5 @@
     height: 0;
     width: 0;
     border: 7px solid transparent;
-    border-right: 7px solid #0D7E83;
+    border-right: 7px solid #EDF9F9;
   }
