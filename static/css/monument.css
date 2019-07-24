@@ -9,7 +9,7 @@ a {
 a:visited {
   color: #076570;
 }
-h2 {
+h1, h2, h3, h4, h5, h6{
   color: #0D7E83;
 }
 

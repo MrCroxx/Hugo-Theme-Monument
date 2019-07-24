@@ -102,6 +102,7 @@
   .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 13px;
     font-size: 0.8125rem;
+    color: #FFF;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     display: inline-block;
