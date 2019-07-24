@@ -1,0 +1,24 @@
+{{ define "custom-css" }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/timeline.css" />
+{{ end }}
+
+{{ define "main" }}
+
+<div class="header">
+    <h1>{{ .Title }}</h1>
+</div>
+
+<div class="content">
+
+    {{ range .Data.Pages.GroupByDate "2006" }}
+    <h2><i class='fa fa-clock-o fa-fw'></i>{{ .Key }}</h2>
+    <section id="cd-timeline" class="cd-container">
+        {{ range .Pages }}
+        {{ .Render "cd-timeline-block-post"}}
+        {{end}}
+    </section> <!-- cd-timeline -->
+    {{ end }}
+
+</div>
+
+{{ end }}

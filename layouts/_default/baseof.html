@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ hugo.Generator }}
+
+    <!-- PureCSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" />
+
+    <!-- Font Awesome -->
+    <link href="{{ .Site.BaseURL }}/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/monument.css" />
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/sidemenu.css" />
+
+    {{ block "custom-css" . }}{{ end }}
+
+</head>
+
+<body>
+    <div id="layout">
+
+        {{ partial "sidemenu.html" . }}
+
+        <div id="main">
+            {{ block "main" . }}{{ end }}
+        </div>
+    </div>
+</body>
+
+<!-- Theme JS -->
+<script src="{{ .Site.BaseURL }}/js/ui.js"></script>
+<script src="{{ .Site.BaseURL }}/js/menus.js"></script>
+
+{{ block "custom-js" . }}{{ end }}
+
+</html>

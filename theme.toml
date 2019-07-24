@@ -1,0 +1,19 @@
+name = "Monument"
+license = "MIT"
+licenselink = "https://github.com/MrCroxx/Hugo-BlackFlow/blob/master/LICENSE"
+description = "A clear, responsive dark style theme with timeline and charts."
+homepage = "http://hugo-blackflow.github.io/"
+tags = ['blog']
+features = ['Timeline','Katex','Gitalk','ChartJS','HighlightJS']
+min_version = "0.41"
+
+[author]
+  name = "Croxx"
+  homepage = "mrcroxx.github.io"
+
+
+[original]
+  name = "blackburn"
+  author = "yoshiharuyamashita"
+  homepage = "https://themes.gohugo.io/blackburn"
+  repo = "https://github.com/yoshiharuyamashita/blackburn"

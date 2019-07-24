@@ -1,0 +1,91 @@
+{{ define "custom-css" }}
+<!-- ChartJS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+<link rel="shortcut icon" href="{{ .Site.BaseURL }}/img/favicon.ico" type="image/x-icon" />
+{{ end }}
+
+{{ define "main" }}
+
+<div class="header">
+    <a href="/">
+        <img class="avator" src="{{ .Site.BaseURL }}/img/avator.jpg" />
+    </a>
+    <h1>{{ .Site.Params.brand }}</h1>
+    <h2>{{ .Site.Params.subtitle }}</h2>
+</div>
+
+<div class="content">
+    <canvas id="postsChart" width="800" height="300"></canvas>
+</div>
+<script>
+    window.onload = function () {
+        let ctx = document.querySelector("#postsChart");
+        let words = [
+            {{ range .Data.Pages.GroupByDate "2006-01" "asc" }}                            
+                {{ $words := 0 }}
+                    {{ range .Pages }}                            
+                    {{ $words = add $words .WordCount }}
+                    {{ end }}
+                {{ $words }},
+            {{ end }}
+        ];
+        let months = [
+            {{ range .Data.Pages.GroupByDate "2006-01" "asc" }}                            
+                {{ .Key }},
+            {{ end }}
+        ];
+        let posts = [
+            {{ range .Data.Pages.GroupByDate "2006-01" "asc" }}                            
+                {{ len .Pages }},
+            {{ end }}
+        ];
+        let postschart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: months,
+                datasets: [
+                    {
+                        label: "Posts",
+                        pointBorderWidth:2,
+                        pointBackgroundColor:'rgba(247,159,102,0.5)',
+                        borderColor:"rgba(247,159,102,0.5)",
+                        backgroundColor: 'rgba(1247,159,102,0.2)',
+                        fill: true,
+                        lineTension:0.5,
+                        data: posts,
+                        yAxisID:"posts"
+                    },
+                    {
+                        label: "Words",
+                        pointBorderWidth:2,
+                        pointBackgroundColor:'rgba(13,126,131,0.5)',
+                        borderColor:"rgba(13,126,131,0.5)",
+                        backgroundColor: 'rgba(13,126,131,0.2)',
+                        fill: true,
+                        lineTension:0.5,
+                        data: words,
+                        yAxisID:"words"
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    yAxes: [
+                        {
+                            id:"posts",
+                            position:"left",
+                            gridLines:{
+                                display:false
+                            }
+                        }, 
+                        {
+                            id:"words",
+                            position:"right",
+                        }
+                    ]
+                }
+            }
+        });
+    }
+</script>
+{{ end }}
