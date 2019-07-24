@@ -1,46 +1,45 @@
-# BlackFlow Hugo Theme
+# Hugo Theme - Monument
 
-BlackFlow is a clear, responsive dark style theme with timeline and charts.
+A colorful Hugo theme with various out-of-box features.
 
-*This theme is referenced from [blackburn](<https://github.com/yoshiharuyamashita/blackburn>) by [yoshiharuyamashita](https://github.com/yoshiharuyamashita).*
+![screenshot](https://raw.githubusercontent.com/mrcroxx/hugo-theme-monument/master/images/screenshot.png)
 
-![screenshot](https://raw.githubusercontent.com/mrcroxx/hugo-blackflow/master/images/screenshot.png)
-
-## Demo
-
-You can reach a live [Demo](<https://hugo-blackflow.github.io>) here which contains official documents from [Hugo](<https://gohugo.io/>) and some other documents about this theme.
+**🎈[Demo](<https://hugo-theme-monument.github.io>)**
+*If you are using Chrome, set [chrome://flags/#force-color-profile](<chrome://flags/#force-color-profile>) to sRGB to get a better performance.*
 
 ## Features
 
-- A clear chart for counting posts and words on index page.
-- A clear sidebar with category links and social links.
-- Timeline organized posts and categories lists.
-- Automatic code highlighting supported by [highlight.js](https://highlightjs.org/).
-- Latex language supported by [KaTeX](<https://katex.org/>).
-- Charting supported by [ChartJS](<https://www.chartjs.org/>).
-- Comment system supported by [Gitalk](<https://github.com/gitalk/gitalk>).
+- [x] A posts and words counting chart on the home page.
+- [x] Category links and social links on the sidebar.
+- [x] Timeline organized posts and categories lists.
+- [x] Automatic code highlighting supported by [highlight.js](https://highlightjs.org/).
+- [x] Latex expression supported by [KaTeX](<https://katex.org/>).
+- [x] Optional charting supported by [ChartJS](<https://www.chartjs.org/>).
+- [x] Comment system supported by [Gitalk](<https://github.com/gitalk/gitalk>).
+- [x] A TIME-SUCKING [404 page](<#404-page>). 
 - ...
 
 ## Getting Started
 
-1. Clone this repository to your hugo theme directory.
+### 1. Clone this repository to your hugo theme directory.
 
 ```bash
 cd /path/to/your/hugo/site/
-git submodule add https://github.com/mrcroxx/hugo-blackflow.git themes/blackflow
+git submodule add https://github.com/mrcroxx/hugo-theme-monument.git themes/Monument
 ```
 
-2. Switch your theme to *BlackFlow* in your *config.toml*.
+### 2. Switch your theme to *Monument* in your *config.toml*.
 
 ```toml
-theme = "blackflow"
+theme = "Monument"
 ```
 
-3. Customize your site.
+### 3. Customize your site.
 
 For more information read [Site Configuration](<#site-configuration>).
 
-## Site Configuration<a name="site-configuration"></a>
+## Site Configuration
+<a name="site-configuration"></a>
 
 Take a look in the `exampleSite` folder first.
 
@@ -53,7 +52,7 @@ summaryLength = 40
 hasCJKLanguage = true
 ```
 
-### Menu
+### Menu Link
 
 Take a look at the `config.toml` file in the `exampleSite` folder.
 
@@ -67,12 +66,12 @@ See `layouts/partials/social.html` for more information.
 
 ```toml
 [params]
-    brand = "BlackFlow" # Showed at the top of the sidebar.
-    subtitle = "A brief black style Hugo theme."
+    brand = "Monument" # Showed at the top of the sidebar.
+    subtitle = "A colorful Hugo theme with various out-of-box features."
     dateformat = "2006-01-02 15:04"
     math = true # Turn KaTeX support on.
     max_taxonomy_terms = 3 # Limit posts showed below tags or topics.
-    highlightjs = "androidstudio" # Customize the theme of highlightjs.
+    highlightjs = "atom-one-light" # Customize the theme of highlightjs.
     highlightjs_extra_languages = ["yaml","kotlin"] # Add extra languages support.
     comment_system = "gitalk" # Turn Gitalk support on.
     comment_system_client_id = "xxx" 
@@ -100,21 +99,18 @@ include = ["ChartJS"]
 
 ## More Screenshots
 
-### Index Page
+### Home Page
 
-![Index Page](<https://raw.githubusercontent.com/mrcroxx/hugo-blackflow/master/images/screenshot-index.png>)
+![Home Page](<https://raw.githubusercontent.com/mrcroxx/hugo-theme-monument/master/images/screenshot-home.png>)
 
 ### Posts Page
 
-![Posts Page](<https://raw.githubusercontent.com/mrcroxx/hugo-blackflow/master/images/screenshot-posts.png>)
+![Posts Page](<https://raw.githubusercontent.com/mrcroxx/hugo-theme-monument/master/images/screenshot-posts.png>)
 
 ### KaTeX & ChartJS
 
-![KaTeX & ChartJS](<https://raw.githubusercontent.com/mrcroxx/hugo-blackflow/master/images/screenshot-katex-chartjs.png>)
+![KaTeX & ChartJS](<https://raw.githubusercontent.com/mrcroxx/hugo-theme-monument/master/images/screenshot-katex-chartjs.png>)
 
 ### 404 Page
-
-![404 Page](<https://raw.githubusercontent.com/mrcroxx/hugo-blackflow/master/images/screenshot-404.png>)
-
-
-
+<a name="404-page"></a>
+![404 Page](<https://raw.githubusercontent.com/mrcroxx/hugo-theme-monument/master/images/screenshot-404.gif>)
