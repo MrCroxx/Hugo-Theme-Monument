@@ -1,3 +1,7 @@
+{{ define "title" }}
+<title>{{ .Site.Params.brand }} - {{ .Title }}</title>
+{{ end }}
+
 {{ define "custom-css" }}
 <!-- highlightJS -->
 {{ with .Site.Params.highlightjs }}

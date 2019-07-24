@@ -1,3 +1,7 @@
+{{ define "title" }}
+<title>{{ .Site.Params.brand }} - {{ .Type }}</title>
+{{ end }}
+
 {{ define "custom-css" }}
 <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/timeline.css" />
 {{ end }}
